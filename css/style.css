@@ -1,0 +1,229 @@
+/* Reset CSS */
+body, h1, h2, p, div, section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f4e7; /* Warna krem lembut */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header / Hero Section */
+.landing-header {
+    background-color: #d32f2f; /* Merah */
+    color: #fff;
+    text-align: center;
+    padding: 40px 10px;
+}
+
+.landing-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.landing-header p {
+    font-size: 1.2em;
+}
+
+.landing-header .cta-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #388e3c; /* Hijau */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.landing-header .cta-btn:hover {
+    background-color: #2e7d32;
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#timer {
+    font-size: 2em;
+    font-weight: bold;
+    color: #d32f2f; /* Merah */
+}
+
+/* Galeri Produk - Katalog */
+.promo-highlights {
+    padding: 40px 10px;
+    background-color: #f2f2f2;
+}
+
+.promo-highlights h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.highlight-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Menjaga gambar tetap proporsional dan tidak terdistorsi */
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product .original-price {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.product .discount-price {
+    color: #d32f2f; /* Merah */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimoni Pelanggan */
+.testimonials {
+    background-color: #388e3c; /* Hijau */
+    color: #fff;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.testimonials .testimonial {
+    margin-bottom: 20px;
+}
+
+.testimonials .testimonial p {
+    font-style: italic;
+    font-size: 1.1em;
+}
+
+.testimonials .testimonial span {
+    display: block;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/* Lokasi Toko (Peta) */
+.map {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32; /* Hijau gelap */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d32f2f; /* Merah */
+    transform: scale(1.1);
+}
+
+/* Media Queries */
+
+/* Untuk Tablet */
+@media (max-width: 768px) {
+    .landing-header h1 {
+        font-size: 2em;
+    }
+
+    .landing-header p {
+        font-size: 1em;
+    }
+
+    .product img {
+        height: 200px; /* Menjaga ukuran gambar agar sesuai */
+    }
+
+    .product-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Untuk Ponsel */
+@media (max-width: 480px) {
+    .landing-header h1 {
+        font-size: 1.5em;
+    }
+
+    .landing-header p {
+        font-size: 1em;
+    }
+
+    .product img {
+        height: 150px; /* Ukuran gambar lebih kecil untuk ponsel */
+    }
+
+    .product-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .countdown-timer {
+        font-size: 1.5em;
+    }
+
+    .map iframe {
+        max-width: 100%;
+    }
+}
